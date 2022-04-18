@@ -73,7 +73,11 @@ class Observable {
         return;
       }
 
-      func(args);
+      if (func === undefined) {
+        func = () => {};
+      }
+
+      func(...args);
 
       if (remove) {
         subscribed.delete(uuid);
@@ -84,24 +88,24 @@ class Observable {
 
 export default Observable;
 
-const observable = new Observable(subscriber => {
-  subscriber.next(1);
-  subscriber.next(2);
-  setTimeout(() => {
-    subscriber.next(3);
-    subscriber.next(4);
-    subscriber.complete();
-  }, 100);
-});
+// const observable = new Observable(subscriber => {
+//   subscriber.next(1);
+//   subscriber.next(2);
+//   setTimeout(() => {
+//     subscriber.next(3);
+//     subscriber.next(4);
+//     subscriber.complete();
+//   }, 100);
+// });
 
-observable.subscribe({
-  next: value => {
-    console.log('we got a value', value);
-  },
-  error: error => {
-    console.log('we got an error', error);
-  },
-  complete: () => {
-    console.log('ok, no more values');
-  },
-});
+// observable.subscribe({
+//   next: value => {
+//     console.log('we got a value', value);
+//   },
+//   error: error => {
+//     console.log('we got an error', error);
+//   },
+//   complete: () => {
+//     console.log('ok, no more values');
+//   },
+// });

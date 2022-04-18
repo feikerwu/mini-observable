@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1650020586830" clover="3.2.0">
-  <project timestamp="1650020586830" name="All files">
-    <metrics statements="22" coveredstatements="21" conditionals="7" coveredconditionals="5" methods="9" coveredmethods="6" elements="38" coveredelements="32" complexity="0" loc="22" ncloc="22" packages="1" files="2" classes="2"/>
+<coverage generated="1650251207017" clover="3.2.0">
+  <project timestamp="1650251207017" name="All files">
+    <metrics statements="24" coveredstatements="23" conditionals="8" coveredconditionals="6" methods="10" coveredmethods="7" elements="42" coveredelements="36" complexity="0" loc="24" ncloc="24" packages="1" files="2" classes="2"/>
     <file name="index.ts" path="/Users/feiwu/code/github/mini-observer/src/index.ts">
-      <metrics statements="20" coveredstatements="19" conditionals="5" coveredconditionals="4" methods="8" coveredmethods="5"/>
+      <metrics statements="22" coveredstatements="21" conditionals="6" coveredconditionals="5" methods="9" coveredmethods="6"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
-      <line num="16" count="5" type="stmt"/>
-      <line num="18" count="5" type="stmt"/>
+      <line num="16" count="6" type="stmt"/>
+      <line num="18" count="6" type="stmt"/>
       <line num="26" count="5" type="stmt"/>
       <line num="27" count="5" type="stmt"/>
       <line num="33" count="5" type="stmt"/>
@@ -17,13 +17,15 @@
       <line num="47" count="5" type="cond" truecount="1" falsecount="1"/>
       <line num="59" count="5" type="stmt"/>
       <line num="70" count="15" type="stmt"/>
-      <line num="71" count="17" type="stmt"/>
-      <line num="72" count="17" type="cond" truecount="1" falsecount="0"/>
+      <line num="71" count="19" type="stmt"/>
+      <line num="72" count="19" type="cond" truecount="1" falsecount="0"/>
       <line num="73" count="2" type="stmt"/>
-      <line num="76" count="15" type="stmt"/>
-      <line num="78" count="15" type="cond" truecount="1" falsecount="0"/>
-      <line num="79" count="2" type="stmt"/>
-      <line num="85" count="1" type="stmt"/>
+      <line num="76" count="17" type="cond" truecount="1" falsecount="0"/>
+      <line num="77" count="1" type="stmt"/>
+      <line num="80" count="17" type="stmt"/>
+      <line num="82" count="17" type="cond" truecount="1" falsecount="0"/>
+      <line num="83" count="3" type="stmt"/>
+      <line num="89" count="1" type="stmt"/>
     </file>
     <file name="utils.ts" path="/Users/feiwu/code/github/mini-observer/src/utils.ts">
       <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>

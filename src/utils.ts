@@ -7,7 +7,7 @@ export interface AnyFunction {
 }
 
 export type Observer = {
-  next: AnyFunction;
+  next?: AnyFunction;
   error?: AnyFunction;
   complete?: AnyFunction;
 };

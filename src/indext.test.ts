@@ -1,5 +1,7 @@
 import Observable from './index';
 
+jest.useFakeTimers();
+
 let observer = {
   next: jest.fn(),
   error: jest.fn(),
@@ -66,10 +68,21 @@ describe('Observable', () => {
 
     observable.subscribe(observer);
 
-    expect(observer.next).toBeCalledTimes(4);
-    expect(observer.complete).toBeCalledTimes(1);
+    expect(observer.next).toBeCalledTimes(2);
+    // expect(observer.complete).toBeCalledTimes(1);
 
+    jest.runAllTimers();
+
+    expect(observer.next).toBeCalledTimes(4);
     expect(observer.next.mock.calls).toEqual([[1], [2], [3], [4]]);
-    expect(observer.complete.mock.calls).toEqual([[undefined]]);
+    expect(observer.complete.mock.calls).toEqual([[]]);
+  });
+
+  test('next/error/complete could be optional', () => {
+    const observable = new Observable(subscriber => {
+      subscriber.next(1);
+    });
+
+    expect(() => observable.subscribe({})).not.toThrow();
   });
 });
